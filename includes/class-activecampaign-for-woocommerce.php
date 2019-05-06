@@ -467,7 +467,9 @@ class Activecampaign_For_Woocommerce {
 		);
 
 		$this->loader->add_action(
-			'woocommerce_after_checkout_billing_form',
+			// Pixelgrade: changed the checkout hook to move the checkbox to where we want it.
+			// 'woocommerce_after_checkout_billing_form',
+			'woocommerce_review_order_before_submit',
 			$this->public,
 			'handle_woocommerce_checkout_form'
 		);

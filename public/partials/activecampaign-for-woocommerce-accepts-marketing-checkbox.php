@@ -28,23 +28,24 @@ $activecampaign_for_woocommerce_accepts_marketing_label = $activecampaign_for_wo
 ?>
 
 <p class="form-row form-row-wide">
-	<input
-		id="activecampaign_for_woocommerce_accepts_marketing"
-		class="woocommerce-form__input woocommerce-form__input-checkbox input-checkbox"
-		type="checkbox"
-		name="activecampaign_for_woocommerce_accepts_marketing"
-		value="1"
-		<?php
-		if ( $activecampaign_for_woocommerce_is_checked ) {
-			echo 'checked="checked"';
-		}
-		?>
-	/>
 
 	<label
 		for="activecampaign_for_woocommerce_accepts_marketing"
 		class="woocommerce-form__label woocommerce-form__label-for-checkbox inline"
 	>
+		<?php // Pixelgrade: moved the input inside the label for better styling. ?>
+		<input
+			id="activecampaign_for_woocommerce_accepts_marketing"
+			class="woocommerce-form__input woocommerce-form__input-checkbox input-checkbox"
+			type="checkbox"
+			name="activecampaign_for_woocommerce_accepts_marketing"
+			value="1"
+			<?php
+			if ( $activecampaign_for_woocommerce_is_checked ) {
+				echo 'checked="checked"';
+			}
+			?>
+		/>
 		<span>
 			<?php
 			echo esc_html( $activecampaign_for_woocommerce_accepts_marketing_label );
